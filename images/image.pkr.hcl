@@ -33,7 +33,7 @@ build {
   sources = ["source.amazon-ebs.example"]
 
   provisioner "file" {
-    source      = "../tf-packer.pub"
+    source      = file("~/.ssh/mtcazurekey.pub")
     destination = "/tmp/tf-packer.pub"
   }
   provisioner "shell" {
